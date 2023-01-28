@@ -1,0 +1,112 @@
+.root {
+    -fx-background-color: #1E1E1E;
+}
+
+.button {
+    -fx-background-color: #232323;
+    -fx-background-radius: 4em;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: #2B2B2BFF;
+}
+
+#inputCount {
+    -fx-background-color: #2C2C2C;
+    -fx-background-radius: 1em;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 3);
+}
+
+.matrixPane {
+    -fx-background-color: #2E2E2E;
+}
+
+.matrix-grid {
+    -fx-alignment: center;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-pref-height: 60;
+    -fx-pref-width: 60;
+}
+
+.matrix-label {
+    -fx-pref-height: 60;
+    -fx-pref-width: 60;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-background-color: #363636;
+    -fx-font: 23 System;
+    -fx-background-radius: 1em;
+    -fx-alignment: center;
+}
+
+.matrix-label-activated {
+    -fx-pref-height: 60;
+    -fx-pref-width: 60;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-background-color: #383838;
+    -fx-font: 23 System;
+    -fx-alignment: center;
+    -fx-background-radius: 1em;
+    -fx-effect: dropshadow(gaussian, white, 5, 0.05, 0, 1);
+}
+
+.calc-path {
+    -fx-pref-width: 300;
+    -fx-pref-height: 400;
+    -fx-background-insets: 0;
+    -fx-background-color: #1E1E1E;
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+
+.calc-path .content {
+    -fx-background-radius: 0;
+    -fx-background-color: #1E1E1E;
+}
+
+.calc-path *.text {
+    /*-fx-text-alignment: center;*/
+}
+
+.calc-path .scroll-bar:horizontal,
+.calc-path .scroll-bar:vertical {
+    -fx-background-color: #1E1E1E;
+}
+
+.calc-path .scroll-bar:horizontal .increment-button ,
+.calc-path .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+
+.calc-path .scroll-bar:vertical .increment-button ,
+.calc-path .scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+}
+
+.calc-path .scroll-bar .increment-arrow,
+.calc-path .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.calc-path .scroll-bar:horizontal .track,
+.calc-path .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+
+.calc-path .scroll-bar:horizontal .thumb,
+.calc-path .scroll-bar:vertical .thumb {
+    -fx-background-color: #2E2E2E;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 1em;
+}

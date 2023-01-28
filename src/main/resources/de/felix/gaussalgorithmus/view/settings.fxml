@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            styleClass="root" stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="de.felix.gaussalgorithmus.controller.SettingsController">
+    <children>
+        <Text layoutX="301.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Settings" textAlignment="CENTER" wrappingWidth="198.681640625">
+            <font>
+                <Font name="System Bold" size="50.0" />
+            </font>
+        </Text>
+      <Text fill="WHITE" layoutX="287.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANZAHL AN FUNKTIONEN">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="inputCount" alignment="CENTER" layoutX="363.0" layoutY="234.0" prefHeight="45.0" prefWidth="74.0" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Button layoutX="348.0" layoutY="427.0" mnemonicParsing="false" onAction="#onSaveButtonAction" prefHeight="45.0" prefWidth="104.0" text="Speichern" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
