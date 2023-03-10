@@ -3,6 +3,7 @@ package de.felix.gaussalgorithmus.algorithm;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.VPos;
+import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -15,14 +16,14 @@ public class LabelMatrix {
 
     private final Pane pane;
     private GridPane gridPane;
-    private final BooleanLabel[][] labelMap;
+    private final Label[][] labelMap;
     private final int rows, colums;
 
     public LabelMatrix(Pane pane, int rows, int colums) {
         this.pane = pane;
         this.rows = rows;
         this.colums = colums;
-        labelMap = new BooleanLabel[rows][colums];
+        labelMap = new Label[rows][colums];
         generateLabelMatrix();
     }
 
@@ -36,7 +37,7 @@ public class LabelMatrix {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < colums; j++) {
-                BooleanLabel label = createLabel();
+                Label label = createLabel();
                 labelMap[i][j] = label;
                 pane.add(label, j, i);
             }
@@ -90,22 +91,20 @@ public class LabelMatrix {
         return cubicCurve;
     }
 
-    private BooleanLabel createLabel() {
-        BooleanLabel label = new BooleanLabel();
+    private Label createLabel() {
+        Label label = new Label();
         label.getStyleClass().add("matrix-label");
         return label;
     }
 
-    public void activateLabel(BooleanLabel label) {
+    public void activateLabel(Label label) {
         label.getStyleClass().clear();
         label.getStyleClass().add("matrix-label-activated");
-        label.setActivated(true);
     }
 
-    public void deactivateLabel(BooleanLabel label) {
+    public void deactivateLabel(Label label) {
         label.getStyleClass().clear();
         label.getStyleClass().add("matrix-label");
-        label.setActivated(false);
     }
 
     public int getRows() {
@@ -120,7 +119,7 @@ public class LabelMatrix {
         return gridPane;
     }
 
-    public BooleanLabel[][] getLabelMap() {
+    public Label[][] getLabelMap() {
         return labelMap;
     }
 }

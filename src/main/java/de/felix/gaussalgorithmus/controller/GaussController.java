@@ -1,13 +1,13 @@
 package de.felix.gaussalgorithmus.controller;
 
 import de.felix.gaussalgorithmus.App;
-import de.felix.gaussalgorithmus.algorithm.BooleanLabel;
 import de.felix.gaussalgorithmus.algorithm.GaussAlgorithm;
 import de.felix.gaussalgorithmus.algorithm.LabelMatrix;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
@@ -46,7 +46,7 @@ public class GaussController implements Initializable {
     public void onKeyPress(KeyEvent event) {
         if (!solveButton.isVisible()) return;
         // 0x08 = Backspace
-        BooleanLabel label = labelMatrix.getLabelMap()[y][x];
+        Label label = labelMatrix.getLabelMap()[y][x];
         String number = label.getText();
         System.out.println(labelValue);
         if (event.getCharacter().matches("\u0008")) {
@@ -56,7 +56,7 @@ public class GaussController implements Initializable {
             return;
         }
         if (event.getCharacter().matches("\u0009")) {
-            BooleanLabel[][] tempList = labelMatrix.getLabelMap();
+            Label[][] tempList = labelMatrix.getLabelMap();
             if (x == tempList[0].length - 1 && y == tempList.length - 1) return;
             labelMatrix.deactivateLabel(tempList[y][x]);
             if (x == tempList[0].length - 1) {
@@ -83,7 +83,7 @@ public class GaussController implements Initializable {
 
     private void onMouseClick() {
         if (!solveButton.isVisible()) return;
-        BooleanLabel[][] labels = labelMatrix.getLabelMap();
+        Label[][] labels = labelMatrix.getLabelMap();
         for (int i = 0; i < labels.length; i++) {
             for (int j = 0; j < labels[0].length; j++) {
                 int finalI = i, finalJ = j;
@@ -101,7 +101,7 @@ public class GaussController implements Initializable {
 
     @FXML
     public void onSolveButtonAction() {
-        BooleanLabel[][] labels = labelMatrix.getLabelMap();
+        Label[][] labels = labelMatrix.getLabelMap();
         for (int i = 0; i < labels.length; i++) {
             for (int j = 0; j < labels[0].length; j++) {
                 double value;
