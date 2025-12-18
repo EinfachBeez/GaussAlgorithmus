@@ -2,8 +2,6 @@ module de.felix.gaussalgorithmus {
     requires javafx.controls;
     requires javafx.fxml;
     requires net.yetihafen.javafx.customcaption;
-    requires com.sun.jna;
-    requires com.sun.jna.platform;
 
     opens de.felix.gaussalgorithmus;
     exports de.felix.gaussalgorithmus;
